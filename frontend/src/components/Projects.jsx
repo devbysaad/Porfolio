@@ -36,11 +36,12 @@ const Projects = ({ projects }) => {
 
     const getProjectImage = (projectName) => {
         const name = projectName.toLowerCase();
+        const baseURL = import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://porfolio-backend-server-deployment.vercel.app';
 
         if (name.includes('creavix')) {
-            return 'http://localhost:5000/images/creavix.png';
+            return `${baseURL}/images/creavix.png`;
         } else if (name.includes('mood') || name.includes('song') || name.includes('player')) {
-            return 'http://localhost:5000/images/moody-tunes.png';
+            return `${baseURL}/images/moody-tunes.png`;
         }
         return null;
     };
@@ -48,7 +49,7 @@ const Projects = ({ projects }) => {
     return (
         <section ref={sectionRef} id="projects" className="py-20 md:py-32 bg-[#0d0d0d] px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <h2 className="display-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 animate-fade-up">
+                <h2 className="display-font text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 animate-fade-up">
                     <span className="gradient-coral">PRO</span>
                     <span className="text-white">JECTS</span>
                 </h2>

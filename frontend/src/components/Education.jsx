@@ -29,7 +29,7 @@ const Education = () => {
     return (
         <section ref={sectionRef} className="py-20 md:py-32 bg-[#0d0d0d] px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <h2 className="display-font text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 animate-fade-up">
+                <h2 className="display-font text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-12 md:mb-16 animate-fade-up">
                     <span className="gradient-coral">EDU</span>
                     <span className="text-white">CATION</span>
                 </h2>

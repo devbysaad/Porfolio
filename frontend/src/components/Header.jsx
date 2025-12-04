@@ -83,7 +83,8 @@ const Header = ({ contact }) => {
     }, []);
 
     const handleResumeDownload = () => {
-        window.open('http://localhost:5000/resume/devbysaad_resume.pdf', '_blank');
+        const baseURL = import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://porfolio-backend-server-deployment.vercel.app';
+        window.open(`${baseURL}/resume/devbysaad_resume.pdf`, '_blank');
     };
 
     return (
